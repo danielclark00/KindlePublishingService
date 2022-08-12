@@ -51,7 +51,7 @@ public class MasteryTaskOneTests extends IntegrationTestBase {
             "inactive after the calling the RemoveBook API, but got [%s]",
             catalogItemVersion.getBookId(),
             catalogItemVersion.getVersion(),
-            result));
+            result)); 
         assertGetBookRequestThrowsBookNotFoundException();
     }
 
