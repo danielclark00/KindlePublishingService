@@ -7,6 +7,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedEnum;
+import com.amazonaws.services.dynamodbv2.xspec.S;
 
 import java.util.Objects;
 
@@ -19,6 +20,18 @@ public class CatalogItemVersion {
     private String author;
     private String text;
     private BookGenre genre;
+
+    public CatalogItemVersion() {}
+
+    public CatalogItemVersion(CatalogItemVersion.Builder builder) {
+        this.bookId = builder.bookId;
+        this.version = builder.version;
+        this.inactive = builder.inactive;
+        this.title = builder.title;
+        this.author = builder.author;
+        this.text = builder.text;
+        this.genre = builder.genre;
+    }
 
     @DynamoDBHashKey(attributeName = "bookId")
     public String getBookId() {
@@ -124,5 +137,56 @@ public class CatalogItemVersion {
                 getAuthor(),
                 getText(),
                 getGenre());
+    }
+
+    public static CatalogItemVersion.Builder builder() { return new CatalogItemVersion.Builder(); }
+
+    public static final class Builder {
+        private String bookId;
+        private int version;
+        private boolean inactive;
+        private String title;
+        private String author;
+        private String text;
+        private BookGenre genre;
+
+        public Builder() {}
+
+        public CatalogItemVersion.Builder withBookId(String bookId) {
+            this.bookId = bookId;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withVersion(int version) {
+            this.version = version;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withInactive(boolean inactive) {
+            this.inactive = inactive;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withTitle(String title) {
+            this.title = title;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withAuthor(String author) {
+            this.author = author;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withText(String text) {
+            this.text = text;
+            return this;
+        }
+
+        public CatalogItemVersion.Builder withGenre(BookGenre genre) {
+            this.genre = genre;
+            return this;
+        }
+
+        public CatalogItemVersion build() { return new CatalogItemVersion(this); }
     }
 }

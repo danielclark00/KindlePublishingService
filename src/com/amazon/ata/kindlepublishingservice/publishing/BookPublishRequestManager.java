@@ -3,8 +3,8 @@ package com.amazon.ata.kindlepublishingservice.publishing;
 import javax.inject.Inject;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-public class BookPublishRequestManager {
-    private ConcurrentLinkedQueue<BookPublishRequest>  queue;
+public final class BookPublishRequestManager {
+    private final ConcurrentLinkedQueue<BookPublishRequest>  queue;
 
 
 
