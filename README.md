@@ -1,4 +1,4 @@
-### Kindle Publishing Service
+# Kindle Publishing Service
 
 ### Ambiguity, Complexity, and Scope
 
