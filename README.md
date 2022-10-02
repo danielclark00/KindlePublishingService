@@ -1,4 +1,4 @@
-# Unit 6 Project: Kindle Publishing Service
+Kindle Publishing Service
 
 ### Ambiguity, Complexity, and Scope
 
