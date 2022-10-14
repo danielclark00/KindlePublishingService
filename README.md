@@ -27,7 +27,7 @@ My Contributions:
 ### [Mastery Task 2: Submit to the process](tasks/MasteryTask02.md)
 
 My Contributions:
-- [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishingRequestManager.java)  
+- [BookPublishRequestManger](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequestManager.java)  
 - [SubmitBookForPublishingActivity](src/com/amazon/ata/kindlepublishingservice/activity/SubmitBookForPublishingActivity.java) 
 
 ### [Mastery Task 3: Query, query on the wall, don’t load one, get them all!](tasks/MasteryTask03.md)
@@ -40,7 +40,7 @@ My Contributions:
 
 My Contributions:
 - [BookPublishTask (Runnable)](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishTask.java)
-- [BookPublishingRequestManager(Updated for Thread Safety)](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishingRequestManager.java)
+- [BookPublishingRequestManager(Updated for Thread Safety)](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequestManager.java)
 - [BookPublishRequest(Updated for Thread Safety)](src/com/amazon/ata/kindlepublishingservice/publishing/BookPublishRequest.java)
 
 *note: This is a project adapted from Amazon Technical Academy by Bloomtech.*
