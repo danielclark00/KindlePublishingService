@@ -2,6 +2,8 @@ package com.amazon.ata.kindlepublishingservice.converters;
 
 import com.amazon.ata.kindlepublishingservice.models.Book;
 import com.amazon.ata.kindlepublishingservice.dynamodb.models.CatalogItemVersion;
+import com.amazon.ata.kindlepublishingservice.publishing.KindleFormattedBook;
+import com.amazon.ata.kindlepublishingservice.utils.KindlePublishingUtils;
 
 /**
  * Converters for Catalog related objects.
@@ -25,5 +27,17 @@ public class CatalogItemConverter {
             .withText(catalogItem.getText())
             .withGenre(catalogItem.getGenre().name())
             .build();
+    }
+
+    public static CatalogItemVersion toNewCatalogItemVersion(KindleFormattedBook book) {
+        return CatalogItemVersion.builder()
+                .withBookId(KindlePublishingUtils.generateBookId())
+                .withVersion(1)
+                .withInactive(false)
+                .withTitle(book.getTitle())
+                .withAuthor(book.getAuthor())
+                .withText(book.getText())
+                .withGenre(book.getGenre())
+                .build();
     }
 }
